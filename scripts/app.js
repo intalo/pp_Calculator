@@ -21,10 +21,12 @@ function backspace() {
 
 //calculate the string value of the calculator painel
 function result() {
+  calculator_painel.placeholder.replace("%", "/100*");
+  let result_calc = calculator_painel.placeholder;
   try {
-    eval(calculator_painel.placeholder);
+    eval(result_calc);
   } catch (err) {
     alert("valor inválido :(");
   }
-  calculator_painel.placeholder = eval(calculator_painel.placeholder);
+  calculator_painel.placeholder = eval(result_calc);
 }
