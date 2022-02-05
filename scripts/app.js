@@ -21,8 +21,7 @@ function backspace() {
 
 //calculate the string value of the calculator painel
 function result() {
-  calculator_painel.placeholder.replace("%", "/100*");
-  let result_calc = calculator_painel.placeholder;
+  let result_calc = calculator_painel.placeholder.replace("%", "/100*");
   try {
     eval(result_calc);
   } catch (err) {
